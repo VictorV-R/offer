@@ -5,6 +5,6 @@ import lombok.Data;
 @Data
 public class EstReg {
     private int id;
-    private String des;
+    private String description;
     private int estReg;
 }

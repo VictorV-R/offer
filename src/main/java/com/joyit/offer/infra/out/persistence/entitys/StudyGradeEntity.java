@@ -20,7 +20,7 @@ public class StudyGradeEntity {
 
     private String description;
 
-    @OneToMany(mappedBy = "studyGradeEntity")
+    @OneToMany(mappedBy = "minStudyGradeEntity")
     private Set<OfferEntity> offerEntitySet;
 
     @ManyToOne()

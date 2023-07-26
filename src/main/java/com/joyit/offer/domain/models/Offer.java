@@ -8,7 +8,7 @@ import java.util.List;
 public class Offer {
     private int id;
     private String position;
-    private TypoOfContract typoOfContract;
+    private TypeOfContract typoOfContract;
     private LevelOfExperience levelOfExperience;
     private WorkingHours workingHours;
     private Modality modality;

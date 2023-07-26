@@ -20,7 +20,7 @@ public class LevelOfExperienceEntity {
 
     private String description;
 
-    @OneToMany(mappedBy = "levelOfExpEntity")
+    @OneToMany(mappedBy = "levelOfExperienceEntity")
     private Set<OfferEntity> offerEntitySet;
 
     @ManyToOne()

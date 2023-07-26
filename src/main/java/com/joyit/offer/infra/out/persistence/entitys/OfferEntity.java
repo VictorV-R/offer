@@ -22,7 +22,7 @@ public class OfferEntity {
 
     @ManyToOne()
     @JoinColumn(name = "typeOfContract_id)", nullable = false)
-    private TypoOfContractEntity typoOfContractEntity;
+    private TypeOfContractEntity typoOfContractEntity;
 
     @ManyToOne()
     @JoinColumn(name = "levelOfExp_id", nullable = false)
@@ -60,7 +60,7 @@ public class OfferEntity {
     private String description;
     private int yearsOfExp;
 
-    private List<Skil> skils;
+//    private List<Skil> skils;
 
     private int minAge;
     private int maxAge;
@@ -69,7 +69,7 @@ public class OfferEntity {
     @JoinColumn(name = "studyGrade_id", nullable = false)
     private StudyGradeEntity minStudyGradeEntity;
 
-    private List<Language> languages;
+//    private List<Language> languages;
 
     @ManyToOne()
     @JoinColumn(name = "estreg_id", nullable = false)

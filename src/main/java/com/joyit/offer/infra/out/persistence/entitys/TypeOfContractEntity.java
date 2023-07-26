@@ -12,7 +12,7 @@ import java.util.Set;
 @Data
 @Entity
 @Table(name = "typeOfContract")
-public class TypoOfContractEntity {
+public class TypeOfContractEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
@@ -20,7 +20,7 @@ public class TypoOfContractEntity {
 
     private String description;
 
-    @OneToMany(mappedBy = "typeOfContractEntity")
+    @OneToMany(mappedBy = "typoOfContractEntity")
     private Set<OfferEntity> offerEntitySet;
 
     @ManyToOne()
