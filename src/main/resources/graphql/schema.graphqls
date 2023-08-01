@@ -1,0 +1,139 @@
+type Offer{
+    id: Int!
+    position: String
+    typeOfContract: TypeOfContract
+    levelOfExp: LevelOfExperience
+    workingHours: WorkingHours
+    modality: Modality
+    area: Area
+    subArea: subArea
+    country: Country
+    location: Location
+    sueldoMin: Int
+    sueldoMax: Int
+    currency: Currency
+    description: String
+    yearsOfExp: Int
+    minAge: Int
+    maxAge: Int
+    studyGrade: StudyGrade
+    estReg: EstReg
+}
+
+type TypeOfContract {
+    id: Int!
+}
+
+type LevelOfExperience {
+    id: Int!
+}
+
+type WorkingHours {
+    id: Int!
+}
+
+type Modality{
+    id: Int!
+}
+
+type Area {
+    id: Int!
+}
+
+type subArea {
+    id: Int!
+}
+
+type Country {
+    id: Int!
+}
+
+type Location {
+    id: Int!
+}
+
+type Currency {
+    id: Int!
+}
+
+type StudyGrade {
+    id: Int!
+}
+
+type EstReg {
+    id: Int!
+}
+
+input OfferInput{
+    id: Int!
+    position: String
+    typeOfContract: TypeOfContractInput
+    levelOfExp: LevelOfExperienceInput
+    workingHours: WorkingHoursInput
+    modality: ModalityInput
+    area: AreaInput
+    subArea: subAreaInput
+    country: CountryInput
+    location: LocationInput
+    sueldoMin: Int
+    sueldoMax: Int
+    currency: CurrencyInput
+    description: String
+    yearsOfExp: Int
+    minAge: Int
+    maxAge: Int
+    studyGrade: StudyGradeInput
+    estReg: EstRegInput
+}
+
+input TypeOfContractInput{
+    id: Int!
+}
+
+input LevelOfExperienceInput {
+    id: Int!
+}
+
+input WorkingHoursInput {
+    id: Int!
+}
+
+input ModalityInput{
+    id: Int!
+}
+
+input AreaInput {
+    id: Int!
+}
+
+input subAreaInput {
+    id: Int!
+}
+
+input CountryInput {
+    id: Int!
+}
+
+input LocationInput {
+    id: Int!
+}
+
+input CurrencyInput {
+    id: Int!
+}
+
+input StudyGradeInput {
+    id: Int!
+}
+
+input EstRegInput {
+    id: Int!
+}
+
+type Query{
+    offer(id:Int!): Offer
+}
+
+type Mutation{
+    createOffer(offer: OfferInput):Offer
+}

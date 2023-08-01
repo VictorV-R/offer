@@ -2,6 +2,8 @@ package com.joyit.offer.infra.in.web;
 
 import com.joyit.offer.application.service.OfferService;
 import com.joyit.offer.domain.models.Offer;
+import org.springframework.graphql.data.method.annotation.Argument;
+import org.springframework.graphql.data.method.annotation.MutationMapping;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

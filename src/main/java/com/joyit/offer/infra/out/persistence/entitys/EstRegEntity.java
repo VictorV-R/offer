@@ -11,7 +11,7 @@ import java.util.Set;
 @NoArgsConstructor
 @Data
 @Entity
-@Table(name = "civil_status")
+@Table(name = "est_reg")
 public class EstRegEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -22,9 +22,26 @@ public class EstRegEntity {
     private int estReg;
 
     @OneToMany(mappedBy = "estRegEntity")
-    private Set<AreaEntity> civilStatusEntitySet;
+    private Set<AreaEntity> areaEntities;
     @OneToMany(mappedBy = "estRegEntity")
-    private Set<CountryEntity> genderEntitySet;
+    private Set<CountryEntity> countryEntities;
     @OneToMany(mappedBy = "estRegEntity")
-    private Set<OfferEntity> applicantEntitySet;
+    private Set<CurrencyEntity> currencyEntities;
+    @OneToMany(mappedBy = "estRegEntity")
+    private Set<LevelOfExperienceEntity> levelOfExperienceEntities;
+    @OneToMany(mappedBy = "estRegEntity")
+    private Set<LocationEntity> locationEntities;
+    @OneToMany(mappedBy = "estRegEntity")
+    private Set<ModalityEntity> modalityEntities;
+    @OneToMany(mappedBy = "estRegEntity")
+    private Set<StudyGradeEntity> studyGradeEntities;
+    @OneToMany(mappedBy = "estRegEntity")
+    private Set<SubAreaEntity> subAreaEntities;
+    @OneToMany(mappedBy = "estRegEntity")
+    private Set<TypeOfContractEntity> typeOfContractEntities;
+    @OneToMany(mappedBy = "estRegEntity")
+    private Set<WorkingHoursEntity> workingHoursEntities;
+
+    @OneToMany(mappedBy = "estRegEntity")
+    private Set<OfferEntity> offerEntitySet;
 }

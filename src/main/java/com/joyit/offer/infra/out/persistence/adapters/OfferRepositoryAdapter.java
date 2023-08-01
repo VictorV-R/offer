@@ -7,6 +7,9 @@ import com.joyit.offer.infra.out.persistence.mappers.OfferMapper;
 import com.joyit.offer.infra.out.persistence.repository.OfferRepository;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Component
 public class OfferRepositoryAdapter implements OfferRepositoryPort {
 
@@ -20,6 +23,15 @@ public class OfferRepositoryAdapter implements OfferRepositoryPort {
     public Offer save(Offer offer) {
         OfferEntity offerEntity = OfferMapper.domainToEntity(offer);
         OfferEntity savedOfferEntity = offerRepository.save(offerEntity);
-        return null;
+        return OfferMapper.entityToDomain(savedOfferEntity);
+    }
+
+    @Override
+    public List<Offer> getAll() {
+        List<OfferEntity> listOfffers = offerRepository.findAll();
+        List<Offer> offerList = new ArrayList<>();
+        for(OfferEntity offerEntity: listOfffers)
+            offerList.add(OfferMapper.entityToDomain(offerEntity));
+        return offerList;
     }
 }
