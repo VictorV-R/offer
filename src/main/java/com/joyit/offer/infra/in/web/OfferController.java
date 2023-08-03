@@ -8,6 +8,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/offers")
 public class OfferController {
@@ -21,6 +23,11 @@ public class OfferController {
     public ResponseEntity<Offer> createOffer(@RequestBody Offer offer){
         Offer createdOffer = offerService.createOffer(offer);
         return new ResponseEntity<>(createdOffer, HttpStatus.CREATED);
+    }
+    @GetMapping
+    public List<Offer> all(){
+        List<Offer> offers = offerService.findAllOffers();
+        return new ResponseEntity<>(offers, HttpStatus.FOUND).getBody();
     }
 
 

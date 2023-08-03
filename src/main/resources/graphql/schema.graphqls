@@ -132,6 +132,7 @@ input EstRegInput {
 
 type Query{
     offer(id:Int!): Offer
+    offers: [Offer]
 }
 
 type Mutation{
