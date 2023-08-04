@@ -1,6 +1,6 @@
 package com.joyit.offer.infra.out.persistence.adapters;
 
-import com.joyit.offer.domain.models.Offer;
+import com.joyit.offer.domain.models.*;
 import com.joyit.offer.domain.ports.out.OfferRepositoryPort;
 import com.joyit.offer.infra.out.persistence.entitys.OfferEntity;
 import com.joyit.offer.infra.out.persistence.mappers.OfferMapper;
@@ -27,7 +27,7 @@ public class OfferRepositoryAdapter implements OfferRepositoryPort {
     }
 
     @Override
-    public List<Offer> getAll() {
+    public List<Offer> getAllOffers() {
         List<OfferEntity> listOfffers = offerRepository.findAll();
         List<Offer> offerList = new ArrayList<>();
         for(OfferEntity offerEntity: listOfffers)

@@ -8,6 +8,7 @@ public class CurrencyMapper {
         Currency currency = new Currency();
         currency.setId(currencyEntity.getId());
         currency.setDescription(currencyEntity.getDescription());
+        currency.setEstReg(EstRegMapper.entityToDomain(currencyEntity.getEstRegEntity()));
         return currency;
     }
 
@@ -15,6 +16,7 @@ public class CurrencyMapper {
         CurrencyEntity currencyEntity = new CurrencyEntity();
         currencyEntity.setId(currency.getId());
         currencyEntity.setDescription(currency.getDescription());
+        currencyEntity.setEstRegEntity(EstRegMapper.domainToEntity(currency.getEstReg()));
         return currencyEntity;
     }
 }

@@ -16,6 +16,6 @@ public class FindAllOffersUseCaseImpl implements FindAllOffersUseCase {
 
     @Override
     public List<Offer> findAllOffers() {
-        return offerRepositoryPort.getAll();
+        return offerRepositoryPort.getAllOffers();
     }
 }

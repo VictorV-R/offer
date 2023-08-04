@@ -8,6 +8,7 @@ public class LevelOFExperienceMapper {
         LevelOfExperience levelOfExperience = new LevelOfExperience();
         levelOfExperience.setId(levelOfExperienceEntity.getId());
         levelOfExperience.setDescription(levelOfExperienceEntity.getDescription());
+        levelOfExperience.setEstReg(EstRegMapper.entityToDomain(levelOfExperienceEntity.getEstRegEntity()));
         return levelOfExperience;
     }
 
@@ -15,6 +16,7 @@ public class LevelOFExperienceMapper {
         LevelOfExperienceEntity levelOfExperienceEntity = new LevelOfExperienceEntity();
         levelOfExperienceEntity.setId(levelOfExperience.getId());
         levelOfExperienceEntity.setDescription(levelOfExperience.getDescription());
+        levelOfExperienceEntity.setEstRegEntity(EstRegMapper.domainToEntity(levelOfExperience.getEstReg()));
         return levelOfExperienceEntity;
     }
 }

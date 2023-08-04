@@ -8,6 +8,7 @@ public class ModalityMapper {
         Modality modality = new Modality();
         modality.setId(modalityEntity.getId());
         modality.setDescription(modalityEntity.getDescription());
+        modality.setEstReg(EstRegMapper.entityToDomain(modalityEntity.getEstRegEntity()));
         return modality;
     }
 
@@ -15,6 +16,7 @@ public class ModalityMapper {
         ModalityEntity modalityEntity = new ModalityEntity();
         modalityEntity.setId(modality.getId());
         modalityEntity.setDescription(modality.getDescription());
+        modalityEntity.setEstRegEntity(EstRegMapper.domainToEntity(modality.getEstReg()));
         return modalityEntity;
     }
 }

@@ -22,119 +22,82 @@ type Offer{
 
 type TypeOfContract {
     id: Int!
+    description: String!
+    estReg: EstReg!
 }
 
 type LevelOfExperience {
     id: Int!
+    description: String!
+    estReg: EstReg!
 }
 
 type WorkingHours {
     id: Int!
+    description: String!
+    estReg: EstReg!
 }
 
 type Modality{
     id: Int!
+    description: String!
+    estReg: EstReg!
 }
 
 type Area {
     id: Int!
+    description: String!
+    estReg: EstReg!
 }
 
 type subArea {
     id: Int!
+    area: Area!
+    description: String!
+    estReg: EstReg!
 }
 
 type Country {
     id: Int!
+    description: String!
+    estReg: EstReg!
 }
 
 type Location {
     id: Int!
+    description: String!
+    estReg: EstReg!
 }
 
 type Currency {
     id: Int!
+    description: String!
+    estReg: EstReg!
 }
 
 type StudyGrade {
     id: Int!
+    description: String!
+    estReg: EstReg!
 }
 
 type EstReg {
     id: Int!
-}
-
-input OfferInput{
-    id: Int!
-    position: String
-    typeOfContract: TypeOfContractInput
-    levelOfExp: LevelOfExperienceInput
-    workingHours: WorkingHoursInput
-    modality: ModalityInput
-    area: AreaInput
-    subArea: subAreaInput
-    country: CountryInput
-    location: LocationInput
-    sueldoMin: Int
-    sueldoMax: Int
-    currency: CurrencyInput
-    description: String
-    yearsOfExp: Int
-    minAge: Int
-    maxAge: Int
-    studyGrade: StudyGradeInput
-    estReg: EstRegInput
-}
-
-input TypeOfContractInput{
-    id: Int!
-}
-
-input LevelOfExperienceInput {
-    id: Int!
-}
-
-input WorkingHoursInput {
-    id: Int!
-}
-
-input ModalityInput{
-    id: Int!
-}
-
-input AreaInput {
-    id: Int!
-}
-
-input subAreaInput {
-    id: Int!
-}
-
-input CountryInput {
-    id: Int!
-}
-
-input LocationInput {
-    id: Int!
-}
-
-input CurrencyInput {
-    id: Int!
-}
-
-input StudyGradeInput {
-    id: Int!
-}
-
-input EstRegInput {
-    id: Int!
+    description: String!
+    estReg: Int!
 }
 
 type Query{
     offer(id:Int!): Offer
     offers: [Offer]
-}
-
-type Mutation{
-    createOffer(offer: OfferInput):Offer
+    areas: [Area]
+    countrys: [Country]
+    estRegs: [EstReg]
+    levelOfExps: [LevelOfExperience]
+    locations: [Location]
+    modalitys: [Modality]
+    studyGrades: [StudyGrade]
+    subAreas: [subArea]
+    typeOfContracts: [TypeOfContract]
+    workingHours: [WorkingHours]
 }

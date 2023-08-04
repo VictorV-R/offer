@@ -8,6 +8,7 @@ public class StudyGradeMapper {
         StudyGrade studyGrade = new StudyGrade();
         studyGrade.setId(studyGradeEntity.getId());
         studyGrade.setDescription(studyGradeEntity.getDescription());
+        studyGrade.setEstReg(EstRegMapper.entityToDomain(studyGradeEntity.getEstRegEntity()));
         return studyGrade;
     }
 
@@ -15,6 +16,7 @@ public class StudyGradeMapper {
         StudyGradeEntity studyGradeEntity = new StudyGradeEntity();
         studyGradeEntity.setId(studyGrade.getId());
         studyGradeEntity.setDescription(studyGrade.getDescription());
+        studyGradeEntity.setEstRegEntity(EstRegMapper.domainToEntity(studyGrade.getEstReg()));
         return studyGradeEntity;
     }
 }

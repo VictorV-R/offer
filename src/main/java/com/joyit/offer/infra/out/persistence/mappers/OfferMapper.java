@@ -27,7 +27,6 @@ public class OfferMapper {
         offer.setMinStudyGrade(StudyGradeMapper.entityToDomain(offerEntity.getMinStudyGradeEntity()));
         // Languages
         offer.setEstReg(EstRegMapper.entityToDomain(offerEntity.getEstRegEntity()));
-
         return offer;
     }
 
@@ -54,7 +53,6 @@ public class OfferMapper {
         offerEntity.setMinStudyGradeEntity(StudyGradeMapper.domainToEntity(offer.getMinStudyGrade()));
         // Languages
         offerEntity.setEstRegEntity(EstRegMapper.domainToEntity(offer.getEstReg()));
-
         return offerEntity;
     }
 }

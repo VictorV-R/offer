@@ -8,6 +8,7 @@ public class AreaMapper {
         Area area = new Area();
         area.setId(areaEntity.getId());
         area.setDescription(areaEntity.getDescription());
+        area.setEstReg(EstRegMapper.entityToDomain(areaEntity.getEstRegEntity()));
         return area;
     }
 
@@ -15,6 +16,7 @@ public class AreaMapper {
         AreaEntity areaEntity = new AreaEntity();
         areaEntity.setId(area.getId());
         areaEntity.setDescription(area.getDescription());
+        areaEntity.setEstRegEntity(EstRegMapper.domainToEntity(area.getEstReg()));
         return areaEntity;
     }
 }

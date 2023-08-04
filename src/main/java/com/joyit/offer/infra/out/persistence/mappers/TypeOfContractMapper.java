@@ -8,6 +8,7 @@ public class TypeOfContractMapper {
         TypeOfContract typeOfContract = new TypeOfContract();
         typeOfContract.setId(typeOfContractEntity.getId());
         typeOfContract.setDescription(typeOfContractEntity.getDescription());
+        typeOfContract.setEstReg(EstRegMapper.entityToDomain(typeOfContractEntity.getEstRegEntity()));
         return typeOfContract;
     }
 
@@ -15,6 +16,7 @@ public class TypeOfContractMapper {
         TypeOfContractEntity typeOfContractEntity = new TypeOfContractEntity();
         typeOfContractEntity.setId(typeOfContract.getId());
         typeOfContractEntity.setDescription(typeOfContract.getDescription());
+        typeOfContractEntity.setEstRegEntity(EstRegMapper.domainToEntity(typeOfContract.getEstReg()));
         return typeOfContractEntity;
     }
 }
